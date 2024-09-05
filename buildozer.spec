@@ -13,7 +13,7 @@ package.domain = sw.redteam
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,mp3
+source.include_exts = py,png,jpg,kv,atlas,wav
 
 # (list) List of inclusions using pattern matching
 source.include_patterns = images/*.png, sound/*.wav
@@ -51,7 +51,7 @@ icon.filename = %(source.dir)s/images/favicon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
-orientation = portrait
+orientation = landscape
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
