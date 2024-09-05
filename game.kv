@@ -1,0 +1,77 @@
+
+<DemonWall>:
+    canvas:
+        Color:
+            rgb: 1, 0, 0
+        Rectangle:
+            pos: self.pos 
+            size: self.size 
+
+
+<Bird>:
+    canvas:
+        Ellipse:
+            angle_start: 120
+            angle_end: 420
+            segments: 10
+            pos: self.pos 
+            size: self.size
+
+        
+
+
+
+<FlappyBirdGame>:
+    fwall:_fwall
+    player: _bird
+
+    canvas:
+        Color:
+            rgb: 0, 1, 0
+        Rectangle:
+            size: self.width, 100
+            pos: self.x, self.y
+
+    DemonWall:
+        id: _fwall
+        size: 50, 100
+        y: root.y + 110
+        center_x: root.x + root.width - 100
+
+    Label:
+        text:'[b][i]CUBE RUNNER[/i][/b]'
+        markup: True
+        font_size: 32
+        center_x: root.center_x
+        y: root.top - 90
+
+    Label:
+        text:'[b]SCORE[/b] '
+        markup: True
+        font_size: 25
+        center_x: root.x + 50
+        y: root.top - 120
+
+    Label:
+        id: _pt
+        text: '0'
+        font_size: 25
+        center_x: root.x + 150
+        y: root.top - 120
+
+    Bird:
+        id: _bird
+        size: 50, 50
+        center_x: (root.width/3)
+        y:100
+
+    Label:
+        id: _gameover
+        markup: True
+        text:""
+        font_size: 40
+        center_x: (root.width/2)
+        y:root.top - 200
+
+        
+
